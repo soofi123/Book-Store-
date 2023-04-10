@@ -1,0 +1,58 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+
+/* .button{
+	float: left;
+	width: 80.75%;
+    padding:10px;
+    margin-bottom: 20px;
+	border: 1px solid #333;
+	color: #969547;
+	text-align: center;
+	font-size: large;
+	background: url('https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_menu_bg.jpg') ;
+	background-size: 100% 100%;
+}
+
+.button:hover{
+	float: left;
+	width: 80.75%;
+    padding:10px;
+    margin-bottom: 20px;
+	border: 1px solid #333;
+	color: #fcf88e;
+	text-align: center;
+	font-size: large;
+} */
+
+
+
+   /* .button{
+    background: url('https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_menu_bg.jpg');
+} */
+
+
+
+

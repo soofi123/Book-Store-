@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/static/book.ico" rel="icon">
+  <title>Book Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="/static/style.css" rel="stylesheet" type="text/css" />
+
+
+  
+
+
+
+</head>
+
+
+
+
+<style>
+
+  
+  #more {display: none;}
+  </style>
+
+
+<body style="font-family:'Cascadia code'">
+  
+  <div id="templatemo_container">
+    <div id="templatemo_menu">
+    	<ul>
+            <li><a href="javascript:reset()" class="current">Home</a></li>
+            <li><a href="/">Books</a></li>            
+            <li><a href="/">New Releases</a></li>
+            <li class="d-flex srch" style="width:fit-content; float: left"><form action="/search" method="post">
+              <input list="qbooks" autocomplete="off" autofocus class="form-control dropdown-toggle" type="text" name="q" placeholder="Enter Book Title">
+              <datalist id="qbooks">
+              
+              </datalist>
+            </form>
+            </li>
+
+            <script>
+              function book(id){
+                location.href = "/book?id=" + id;
+              }
+          
+              function prev(){
+                location.href = "/prev";
+              }
+          
+              function next(){
+                location.href = "/next";
+              }
+          
+              function reset(){
+                location.href = "/reset";
+              }
+          
+          
+          //     const searchInputDropdown = document.getElementById('search-input-dropdown');
+          // const dropdownOptions = document.querySelectorAll('.input-group-dropdown-item');
+          
+          // searchInputDropdown.addEventListener('input', () => {
+          //   const filter = searchInputDropdown.value.toLowerCase();
+          //   showOptions();
+          //   const valueExist = !!filter.length;
+          
+          //   if (valueExist) {
+          //     dropdownOptions.forEach((el) => {
+          //       const elText = el.textContent.trim().toLowerCase();
+          //       const isIncluded = elText.includes(filter);
+          //       if (!isIncluded) {
+          //         el.style.display = 'none';
+          //       }
+          //     });
+          //   }
+          // });
+          
+          // const showOptions = () => {
+          //   dropdownOptions.forEach((el) => {
+          //     el.style.display = 'flex';
+          //   })
+          // }
+          
+          // function search(){
+          //   let input = document.querySelector('input');
+          //   let response = await fetch('/search?q=' + input.value);
+          //   let books = await response.json();
+          //   if (books)
+          //   {
+          //     location.href = "/book" + books[0].name;
+          //   }
+          //   else{
+          //     alert("Book Not Found");
+          //   }
+          // }
+          
+          let input = document.querySelector('input');
+                      input.addEventListener('input', async function() {
+                          let response = await fetch('/search?q=' + input.value);
+                          let books = await response.json();
+                          console.log(books);
+                          let html = '';
+                          for (let id in books) {
+                            console.log(id);
+                            let title = books[id].name.replace('<', '&lt;').replace('&', '&amp;');
+                            html += '<option value="' + title + '">';
+                          }
+                          document.querySelector('datalist').innerHTML = html;
+                      });
+          
+          
+          </script>
+
+        <!-- </ul> -->
+            {% if session["user_id"] %}
+        
+            <li style="float: right; margin-right: 2%;"><a href="/logout">Log Out</a></li>
+            <li style="float: right; color:#969547;margin-top: 15px;">User Name : <img src="/static/username.png" width="10%" height="10%"> {{username}}</li>
+        
+            {% else %}
+        
+            <li style="float: right"><a href="/login">Log In</a></li>
+            <li style="float: right;"><a href="/register">Register</a></li>
+        
+            {% endif %}
+               
+    	</ul>
+    </div> <!-- end of menu --> <!-- end of menu -->
+
+    <div id="templatemo_header">
+    	<div id="templatemo_special_offers">
+        	<p>
+                <span>25%</span> discounts for
+            purchase over 499/-
+        	</p>
+			<a href="/" style="margin-left: 50px;">Read more...</a>
+      </div>
+
+      <div id="templatemo_new_books">
+        	<ul>
+                <li>Do Epic Shit </li>
+                <li>Flow </li>
+                <li>Will </li>
+            </ul>
+            <a href="/" style="margin-left: 50px;">Read more...</a>
+        </div>
+  
+  </div>
+  <!-- end header -->
+  <!--left menu-->
+  <div id="templatemo_content">
+    	
+        <div id="templatemo_content_left">
+        	<div class="templatemo_content_left_section">
+            	<h1>Categories</h1>
+                <ul>
+                    <li><a href="#">Auto-Biography</a></li>
+                    <li><a href="#">Mind & Body </a></li>
+                    <li><a href="#">Self-Development</a></li>
+                    <li><a href="#">Sprituality</a></li>
+                    <li><a href="#">Money and Finance </a></li>
+                    <li><a href="#">Non-fiction</a></li>
+                    <li><a href="#">Enginnering & Technology </a></li>
+                    <li><a href="#">Crypto and Blockchain</a></li>
+                    <li><a href="#">Poetry and Love</a></li>
+            	</ul>
+            </div>
+			<div class="templatemo_content_left_section">
+            	<h1>Bestsellers</h1>
+                <ul>
+                    <li><a href="#">Do Epic Shit </a></li>
+                    <li><a href="#">The Alchemist </a></li>
+                    <li><a href="#">Atomic Habit</a></li>
+                    <li><a href="#">Think Like Monk </a></li>
+                    <li><a href="#">Homo Sapiens</a></li>
+                    <li><a href="#">Who will cry when you die ?</a></li>
+                    <li><a href="#">The monk who sold his ferrari</a></li>
+                    <li><a href="#">Eat that Frog !</a></li>
+            	</ul>
+            </div>
+            
+    
+        </div>
+      </div> <!-- end of content left -->
+
+    
+      <div id="templatemo_content_right">
+
+        	<div class="templatemo_product_box">
+            	<h1>{{books[0]["name"]}}<span> ( by {{books[0]["author"]}} )</span></h1>
+   	      <img src="{{books[0]["image"]}}" alt="image" width="110" />
+                <div class="product_info">
+                	<p>{{books[0]["info"]}}</p>
+                  <h3>₹{{books[0]["price"]}}</h3>
+                    <div class="buy_now_button"><a href="javascript:book({{books[0]["id"]}})">Buy Now</a></div>
+                    <div class="detail_button"><a href="javascript:book({{books[0]["id"]}})">Detail</a></div>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+            
+          
+        	<div class="templatemo_product_box">
+            	<h1>{{books[1]["name"]}}<span> ( by {{books[1]["author"]}} )</span></h1>
+   	      <img src="{{books[1]["image"]}}" alt="image" width="110" />
+                <div class="product_info">
+                	<p>{{books[1]["info"]}}</p>
+                  <h3>₹{{books[0]["price"]}}</h3>
+                   <div class="buy_now_button"><a href="javascript:book({{books[1]["id"]}})">Buy Now</a></div>
+                   <div class="detail_button"><a href="javascript:book({{books[1]["id"]}})">Detail</a></div>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+
+           
+            <div class="templatemo_product_box">
+            	<h1>{{books[2]["name"]}}<span> ( by {{books[2]["author"]}} )</span></h1>
+   	      <img src="{{books[2]["image"]}}" alt="image" width="110"/>
+                <div class="product_info">
+                	<p>{{books[2]["info"]}}</p>
+                    <h3>₹{{books[2]["price"]}}</h3>
+                    <div class="buy_now_button"><a href="javascript:book({{books[2]["id"]}})">Buy Now</a></div>
+                    <div class="detail_button"><a href="javascript:book({{books[2]["id"]}})">Detail</a></div>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+            
+            <div class="templatemo_product_box">
+            	<h1>{{books[3]["name"]}}<span> ( by {{books[3]["author"]}} )</span></h1>
+            	<img src="{{books[3]["image"]}}" alt="image" width="110"/>
+                <div class="product_info">
+                	<p>{{books[3]["info"]}}</p>
+                    <h3>₹{{books[3]["price"]}}</h3>
+                    <div class="buy_now_button"><a href="javascript:book({{books[3]["id"]}})">Buy Now</a></div>
+                    <div class="detail_button"><a href="javascript:book({{books[3]["id"]}})">Detail</a></div>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+      
+
+
+            <!--Division-->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="float: left; width : 80.75%">
+              {% if prev == 1 %}
+              <button  class="btn btnw btn-lg me-md-2 " type="button"  onclick="prev()">Back</button>
+              {% endif %}
+              {% if next == 1 %}
+              <button  class="btn btnw btn-lg " type="button" style="float: right" onclick="next()">Next</button>
+              {% endif %}
+            </div>
+
+
+
+
+
+    	<div class="cleaner_with_height">&nbsp;</div>
+   </div> <!-- end of content -->  
+
+
+
+
+
+
+
+    <!--footer-->
+
+    <div id="templatemo_footer">
+      <a href="/">Home</a> | <a href="/">Search</a> | <a href="/">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+     Copyright © 2024 <a href="#"><strong>Book Store</strong></a> 
+    
+    </div> 
+
+
+          
+
+</body>
+</html>

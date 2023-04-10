@@ -1,0 +1,422 @@
+
+/*somespit*/
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+img {
+	margin: 0px;
+  
+	padding: 0px;
+	border: none;
+}
+
+
+.cleaner {
+	clear: both;
+	width: 100%;
+	height: 1px;
+	font-size: 1px;	
+}
+
+.cleaner_with_height {
+	clear: both;
+	width: 100%;
+	height: 30px;
+	font-size: 1px;	
+}
+
+.cleaner_with_width {
+	float: left;
+	width: 20px;
+	height: 30px;
+	font-size: 1px;	
+}
+
+.buy_now_button a{
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 4px 0 5px 0;
+	margin-bottom: 10px; 
+	background: url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_btn_02.jpg) no-repeat;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.buy_now_button input{
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 4px 0 5px 0;
+	margin-bottom: 10px; 
+	background: url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_btn_02.jpg) no-repeat;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.detail_button a{
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 4px 0 5px 0;
+	margin-bottom: 10px; 
+	background: url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_btn_01.jpg) no-repeat;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.detail_button input{
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 4px 0 5px 0;
+	margin-bottom: 10px; 
+	background: url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_btn_01.jpg) no-repeat;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+.templatemo_product_box h1 span {
+	font-weight: normal;
+}
+
+.templatemo_product_box img {
+	float: left;
+	margin-right: 20px;
+}
+
+.templatemo_product_box .product_info {
+	float: left;
+	width: 80%;
+}
+
+.product_info p {
+	margin-bottom: 15px;
+}
+
+/*End of shit*/
+
+
+
+
+
+#templatemo_container{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px ;
+	background: #1c1c1b url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_bg.jpg) repeat-y;
+  background-size: 100% 100%;
+}
+
+
+
+/* menu */
+
+#templatemo_menu {
+	clear: both;
+	width: 100%;
+	height: 50px;
+	background: url('https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_menu_bg.jpg') ;
+  background-size: 100% 100%;
+  position: fixed;
+}
+
+#templatemo_menu ul {
+	margin: 0;
+	list-style: none;
+	height: 100%;
+}
+
+#templatemo_menu ul li{
+	display: inline;
+	/* padding: 15px 0 0 0 !important; */
+}
+
+#templatemo_menu ul li a{
+	float: left;
+	padding: 15px 40px 0 0;
+	/* font-size: 12px; */
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #969547;
+}
+
+#templatemo_menu li a:hover, #templatemo_menu li .current{
+	color: #fcf88e;
+}
+
+/*end of munu*/
+
+
+/* header */
+#templatemo_header {
+	clear: both;
+	width: 100%;
+	height: 285px;
+	padding: 45px;
+	margin-bottom: 15px;
+	background: url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_header_bg.jpg) no-repeat;
+  background-size: contain;
+  background-position: center 45px;
+
+}
+
+#templatemo_header a,a:hover {
+	color: #ffffff;
+}
+
+#templatemo_header #templatemo_special_offers {
+	float: left;
+	font-size: 14px;	
+	margin-top: 95px;
+	margin-left: 51%;/*special offer text*/
+	width: 180px;
+}
+
+#templatemo_special_offers a {
+	font-size: 12px;
+}
+
+#templatemo_special_offers  p {
+	margin: 0 0 20px 0;
+  color: white;
+}
+#templatemo_special_offers p span {
+	font-size: 18px;
+}
+
+#templatemo_header #templatemo_new_books {
+	float: left;
+	margin-top: 90px;	
+	margin-left: 55px;
+	width: 180px;
+  color: white;
+}
+
+#templatemo_new_books ul {
+	 margin: 0 0 10px 0;
+	 padding: 0 0 0 20px;
+}
+
+#templatemo_new_books li {
+	 margin: 0;
+	 padding: 0; 
+}
+
+
+/* end of header */
+
+
+/* content */
+#templatemo_content {
+	clear: both;
+	width:100%;
+  padding: 0 20px;
+}
+
+#templatemo_content #templatemo_content_left {
+	float: left;
+	width: 180px;
+	padding: 10px;
+	background-color: #171716;
+	border: 1px solid #212120;
+	margin-right: 15px;
+}
+
+#templatemo_content #templatemo_content_right {/*right side books container*/
+	float: left;
+	width: 100%;
+    padding: 20px ;
+  color: white;
+}
+
+
+#templatemo_content_left .templatemo_content_left_section{
+	clear: both;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #2b2b2a;
+	margin-bottom: 20px;
+}
+
+.templatemo_content_left_section h1 {
+	font-size: 14px;
+	color: #cbc750;
+	padding: 0 0 5px 0;
+	margin: 0 0 10px 0;
+	border-bottom: 1px dotted #cbc750;
+}
+
+.templatemo_content_left_section ul {
+	padding: 0;
+	margin: 0;
+}
+
+.templatemo_content_left_section ul li{
+	padding: 0 0 3px 10px;	
+	list-style: none;
+}
+
+.templatemo_content_left_section ul li a{
+	font-weight: normal;
+	text-decoration: none;
+	color: #969547;
+}
+
+.templatemo_content_left_section li a:hover, .templatemo_content_left_section li .current{
+	color: #fcf88e;
+}
+
+
+
+
+
+#templatemo_content_right .templatemo_product_box {/*indivisual books box size*/
+	float: left;
+	width: 40%;
+	height: 270px;
+   padding:10px;
+  margin-bottom: 20px;
+	border: 1px solid #333;
+	color:white;
+}
+
+#templatemo_content_right h1 {
+	padding: 10px;
+	margin: 0 0 20px 0;
+	font-size: 15px;
+	color: #cbc750;
+	background: url(https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_h1_bg.jpg);
+}
+
+#templatemo_content_right h2 {
+	padding: 0 0 0 0;
+	margin: 0 0 20px 0;
+	font-size: 12px;
+	color: #e6e154;
+}
+
+#templatemo_content_right h3 {
+	padding: 0;
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	color: #85391f;
+}
+
+#templatemo_content_right ul {
+	margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+	list-style: none;
+}
+
+#templatemo_content_right li {
+	padding: 0 0 3px 0;
+}
+
+#templatemo_content_right .image_panel {
+	float: left;
+	width: 100px;
+	margin-right: 20px;
+}
+
+#templatemo_content_right p {
+	text-align: justify;
+	padding: 0 0 8px 0;
+}
+
+
+
+/* end of content */
+
+
+/* footer */
+#templatemo_footer {
+	clear: both;
+	width: 100%;
+	/* margin-left: 10px; */ 
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	border-top: 1px solid #25211e;
+	color: #999;
+	background-color: #111110;
+}
+
+#templatemo_footer a{
+	color: #fff;
+	font-weight: normal;
+}
+/* end of footer */
+
+div.discription {
+	font-size: 15px;
+}
+
+
+/*More button*/
+
+#more_btn{
+	float: left;
+	width: 80.75%;
+    padding:10px;
+    margin-bottom: 20px;
+	border: 1px solid #333;
+	color: #969547;
+	text-align: center;
+	font-size: large;
+	background: url('https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_menu_bg.jpg') ;
+	background-size: 100% 100%;
+}
+
+#more_btn:hover{
+	float: left;
+	width: 80.75%;
+    padding:10px;
+    margin-bottom: 20px;
+	border: 1px solid #333;
+	color: #fcf88e;
+	text-align: center;
+	font-size: large;
+}
+
+
+
+.btnw {
+    background: url('https://raw.githubusercontent.com/ItsWhoCares/peace-is-all-i-want/main/images/templatemo_menu_bg.jpg');
+    color: #969547;
+    border-color: transparent;
+}
+
+.btnw:hover{
+    color: #fcf88e;
+	border-color: #969547;
+}
+
+.srch{
+	margin-top: 0px;
+	padding: 8px 0 0 0;
+	vertical-align: middle;
+}
+
+.srch input{
+	background-color: transparent;
+	border: 1px solid #969547;
+	color: #969547;
+}
+
+.form-control:focus {
+    border-color: #fcf88e;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(252 248 142 / 60%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(252 248 142 / 60%);
+}

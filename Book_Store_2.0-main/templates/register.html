@@ -1,0 +1,22 @@
+{% extends "lrlayout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <br><br>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text" minlength="5" maxlength="15">
+        </div>
+        <br>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" minlength="5">
+        </div>
+        <br>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="_confirmation" name="confirmation" placeholder="Confirm Password" type="password" minlength="5">
+        </div>
+        <button class="btn btnw" type="submit" style="margin:auto;display:block;" >Log In</button>
+    </form>
+    <br><br><br>
+{% endblock %}

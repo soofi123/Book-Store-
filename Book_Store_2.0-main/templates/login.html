@@ -1,0 +1,21 @@
+{% extends "lrlayout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <br><br><br>
+    <h6 style="text-align: center;">{{error}}</h6>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        
+        <br>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <br><br>
+        <button class="btn btnw" type="submit" style="margin:auto;display:block;" >Log In</button>
+    </form>
+    <br><br><br><br>
+{% endblock %}

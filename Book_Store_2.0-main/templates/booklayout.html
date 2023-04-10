@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hitech_Books</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link href="/static/book.ico" rel="icon">
+<link href="/static/old_style.css" rel="stylesheet" type="text/css" />
+
+<script>
+        function reset(){
+      location.href = "/reset";
+    }
+</script>
+
+
+
+
+</head>
+
+<style>
+    div.discription {
+	font-size: 15px;
+}
+</style>
+
+<body style="font-family:'Cascadia code'; font-size: 14px;">
+<!-- Peace is what all want  -->
+<div id="templatemo_container">
+	<div id="templatemo_menu">
+    	<ul>
+            <li><a href="javascript:reset()" class="current">Home</a></li>
+            <li><a href="/">Books</a></li>            
+            <li><a href="/">New Releases</a></li>
+        <!-- </ul> -->
+            {% if session["user_id"] %}
+        
+            <li style="float: right; margin-right: 2%;"><a href="/logout">Log Out</a></li>
+            <li style="float: right; color:#969547;margin-top: 0px;width: 25%;  overflow: hidden;text-overflow: ellipsis; ">User Name : <img src="/static/username.png" width="10%" height="55%"> {{username}}</li>
+        
+            {% else %}
+        
+            <li style="float: right"><a href="/login">Log In</a></li>
+            <li style="float: right;"><a href="/register">Register</a></li>
+        
+            {% endif %}
+               
+    	</ul>
+    </div> <!-- end of menu -->
+    
+    <div id="templatemo_header">
+    	<div id="templatemo_special_offers">
+        	<p>
+                <span>25%</span> discounts for
+            purchase over 499/-
+        	</p>
+			<a href="/" style="margin-left: 50px;">Read more...</a>
+        </div>
+
+        <div id="templatemo_new_books">
+        	<ul>
+                <li>Do Epic Shit </li>
+                <li>Flow </li>
+                <li>Will </li>
+            </ul>
+            <a href="/" style="margin-left: 50px;">Read more...</a>
+        </div>
+    </div> <!-- end of header -->
+    
+    <div id="templatemo_content">
+    	
+        <div id="templatemo_content_left">
+        	<div class="templatemo_content_left_section">
+            	<h1>Categories</h1>
+                <ul>
+                    <li><a href="#">Auto-Biography</a></li>
+                    <li><a href="#">Mind & Body </a></li>
+                    <li><a href="#">Self-Development</a></li>
+                    <li><a href="#">Sprituality</a></li>
+                    <li><a href="#">Money and Finance </a></li>
+                    <li><a href="#">Non-fiction</a></li>
+                    <li><a href="#">Enginnering & Technology </a></li>
+                    <li><a href="#">Crypto and Blockchain</a></li>
+                    <li><a href="#">Poetry and Love</a></li>
+            	</ul>
+            </div>
+			<div class="templatemo_content_left_section">
+            	<h1>Bestsellers</h1>
+                <ul>
+                    <li><a href="#">Do Epic Shit </a></li>
+                    <li><a href="#">The Alchemist </a></li>
+                    <li><a href="#">Atomic Habit</a></li>
+                    <li><a href="#">Think Like Monk </a></li>
+                    <li><a href="#">Homo Sapiens</a></li>
+                    <li><a href="#">Who will cry when you die ?</a></li>
+                    <li><a href="#">The monk who sold his ferrari</a></li>
+                    <li><a href="#">Eat that Frog !</a></li>
+            	</ul>
+            </div>
+            
+            <!-- <div class="templatemo_content_left_section">                 -->
+                
+			<!-- </div> -->
+        </div> <!-- end of content left -->
+            
+        
+        <div id="templatemo_content_right">
+        	
+            <h1>{{book["name"]}}<span> ( by {{book["author"]}} )</span></h1>
+            <div class="image_panel"><img src="{{book["image"]}}" alt="CSS Template" width="90"/></div>
+          <h2>Read the lessons - Watch the videos - Do the exercises</h2>
+            <ul>
+	            <li>{{book["author"]}}</a></li>
+            	<li>{{book["date"]}}</li>
+                <li>Pages: {{book["pages"]}}</li>
+                <li>{{book["isbn"]}}</li>
+            </ul>
+            <div class="discription">
+                <br>
+                <br><br>
+                <p>{{book["description"]}}</p>
+            <!-- <p>No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results..</p>
+
+			<p>If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.
+            </p>
+
+			<p>Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, readers will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.
+            </p> -->
+            
+        </div>
+    
+    	<div class="cleaner_with_height">&nbsp;</div>
+    </div> <!-- end of content -->
+    
+    <div id="templatemo_footer">
+	       <a href="/">Home</a> | <a href="#">Search</a> | <a href="#">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2022 <a href="#"><strong>Book Store</strong></a> 
+       
+	</div> 
+
+</div><!-- end of content --> 
+
+</body>
+</html>
